@@ -36,16 +36,16 @@ let lootTable = [{
     healValue: 0
 }]
 
-console.log("❓: \n" + hero.name + " huh?!")
-console.log(".")
-console.log("..")
-console.log("❓❓: \nWell, my name's Ezekiel!")
+console.log("\n" + hero.name + " huh?!")
 console.log("...")
-console.log("....")
+console.log("...")
+console.log("\nWell, my name's Ezekiel!")
+console.log("...")
+console.log("...")
 console.log("Trigger:\nHey " + hero.name +", can you do me a favor?")
 console.log("Trigger:\nI need you to patrol the far reaches of the North for me.")
 console.log("You can kill and loot what you like!")
-console.log("How does 'at sound?")
+console.log("How does that sound?")
 
 
 function printHeroStats(){
@@ -102,8 +102,7 @@ function walk(){
 
 function fightTime(){
     let randomEnemy = Math.floor(3 * Math.random())
-    //Don't remember why I started to add this line below
-    //let currentEnemy = monsters[randomEnemy]
+    
     let enemyDmgDealt
     let enemyDmgTaken    
     //function allowing for a random amount each time based on enemy dmg parameters
@@ -116,14 +115,14 @@ function fightTime(){
     }
     console.log("A giant " + monsters[randomEnemy].name + " approaches!")
     for(let i = 0; monsters[randomEnemy].hp > 0 && hero.hp > 0; i++){
-        let fightCommand = readlineSync.question('\nWhat is your action?\n⚔️ Attack (A)?\n🏃‍♂️Run (R)?\n')
+        let fightCommand = readlineSync.question('\nWhat is your action?\nAttack (A)?\nRun (R)?\n')
         if (fightCommand === "A" || fightCommand === "a" || fightCommand === "attack" || fightCommand === "ATTACK" || fightCommand === "Attack") {
             attacks();
             console.log(i)
             if ( i === 0 ) {
-                console.log("\n🤺\nIt's on!\nYou attack the " + monsters[randomEnemy].name + " and deal " + enemyDmgTaken + " damage")
+                console.log("\nIt's on!\nYou attack the " + monsters[randomEnemy].name + " and deal " + enemyDmgTaken + " damage")
             } else {
-                console.log("\n ⚔️   ⚔️   ⚔️   ⚔️\nThe battle rages on!!!!\nYou attack the " + monsters[randomEnemy].name + " and deal " + enemyDmgTaken + " damage")
+                console.log("\nThe battle rages on!\nYou attack the " + monsters[randomEnemy].name + " and deal " + enemyDmgTaken + " damage")
             }
             monsters[randomEnemy].hp = monsters[randomEnemy].hp - enemyDmgTaken
             attacked();
@@ -152,18 +151,18 @@ function fightTime(){
         } else if (fightCommand === "R" || fightCommand === "r" || fightCommand === "Run" || fightCommand === "run" || fightCommand === "RUN"){
             let escape = Math.floor(2 * Math.random())
             if (escape < 1){
-                console.log("You attempt to escape...  \n__ 🏃____\nThe monster blocks your path!")
+                console.log("You attempt to escape...  \nbut the monster blocks your path!")
                 attacked();
                 console.log("The " + monsters[randomEnemy].name + " lunges at you, dealing " + enemyDmgDealt + " damage.")
                 hero.hp = hero.hp - enemyDmgDealt;                
                 console.log("\nYour current HP @ " + hero.hp + "\n")
             } else {
-                console.log("\n__ 🏃‍♂️💨 _____________\nYou attempt to escape, and......  \n!!!!!     VICTORY     !!!!!\n       ...you escaped \n(●'◡'●)")
+                console.log("\nYou attempt to escape, and... \n!!!!!  VICTORY  !!!!! \n ...you escaped \n")
                 monsters[randomEnemy].hp = 0;
                 fightCommand = ""
             }
         } else {
-            console.log("\nWHOOPS!!!\n🤭🤭🤭🤭🤭🤭\nthat's not an option.\nAttack (A)? or Run (R)?\n")
+            console.log("\nWHOOPS! That's not an option.\nAttack (A)? or Run (R)?\n")
         }
     }
     monsters[0].hp = 30
@@ -172,17 +171,17 @@ function fightTime(){
 }
 
 let monsters = [{
-    name: "Spider Monkey 🐒",
+    name: "Rodan",
     hp : 30,
     minDmg: 1,
     maxDmg: 9
 }, {
-    name: "Fluffer Nuffer 👻",
+    name: "Wendigo",
     hp : 40,
     maxDmg: 14,
     minDmg: 4
 }, {
-    name: "Gorgomasher 👹",
+    name: "Scylla",
     hp : 50,
     minDmg: 7,
     maxDmg: 19
@@ -192,27 +191,27 @@ function useItem(){
     heal = Math.floor(Math.random() * (40 - 20) + 20)
 }
 
-const walkMsg1 = ["\nYou take some steps...\nThe ice wind burns your face\nGoddam, it's cold.", 
-"\n🍃Your feet heavily trudge along...\nYou ask yourself, 🤔 why the hell did you agree to this...",
-"\nA deafening scream 😱 drounds out the sound of the wind. \nYou wonder if something...\nor someone just died in this hell🔥",
-"\nYou briskley pick up the pace on this patrol.👍\nDamn you covered some good ground!🌋\nNot many more legs like this and job will be done.\nTrigger will be SO PROUD!😁",
-"\nAnother small step for Trigger. \nWe've come so far.\n Gotta make it home!",
-"\nYou come out of the clearing in and see a 🌫️ fog 🌫️ everywhere \n It's crazy, you see something shiny ✨....\nThen you remember you got a job to do.",
-"\nYou take two steps and second guess all of your life's decisions thus far. 😕",
-"\n 🕹️ So this is what early games were like?\nOH lawdy, we are having FUN!!",
-"\nWhen in doubt, keep patrolling. 💪😁💪",
-"\nAnother minute dredges by as you walk on forth like a good soldier. \n Starting to wonder if it will ever end. \nIt will. \nI hope. \nEmbrace the suck.🍭"];
+const walkMsg1 = ["\nYou take some steps... \nThe icy wind burns your face... \nIt's so cold.", 
+"\nYour feet heavily trudge along... \nYou ask yourself, why the hell did you agree to this...",
+"\nA deafening scream drounds out the sound of the wind. \nYou wonder if something or someone just died in this hell..",
+"\nYou briskley pick up the pace on this patrol. \nDamn you covered some good ground! \nNot many more legs like this and job will be done. \nEzekiel will be SO PROUD!",
+"\nAnother small step for Ezekiel. \nWe've come so far.\n Gotta make it home!",
+"\nYou come out of the clearing in and see a fog everywhere \nIt's crazy, you see something shiny... \nThen you remember you got a job to do.",
+"\nYou take two steps and second guess all of your life's decisions thus far.",
+"\nSo this is what early games were like? \nOH lawdy, we are having FUN!",
+"\nWhen in doubt, keep patrolling.",
+"\nAnother minute dredges by as you walk on forth like a good soldier. \nStarting to wonder if it will ever end. \nIt will.. \nI hope. \nEmbrace the suck."];
 
 function stillPlaying(){
-    let playAgain = readlineSync.question("\ndo you want to play again?\n");
+    let playAgain = readlineSync.question("\nWould you like to play again?");
     if (playAgain === "Y"){
         hero.hp = 100
         console.log(hero.hp)
         restart()
     } else if (playAgain === "N"){
-        return ("have a daring day!")
+        return ("Have a daring day!")
     } else {
-        console.log("pushed something wrong there, what ya wanna do? Want to play again?");
+        console.log("Pushed something wrong there, what do you want to do? Play again?");
         stillPlaying();
     }
 }
@@ -224,7 +223,7 @@ function start() {
 }
 
 function restart(){
-    console.log("\nGet right back on that horse and make ol' Trigger proud!!!\n")
+    console.log("\nGet right back on that horse and make Ezekiel proud!\n")
     start()
 }
 
@@ -240,6 +239,6 @@ if (hero.hp < 0) {
 
 
 function dead(){
-    console.log("looks like ya done died\n😐😵💀☠️\nAwesome!!!\n");
+    console.log("\nLooks like your taking a permanent nap...\n");
     stillPlaying()
 }

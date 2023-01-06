@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+#one {
+    position: relative;
+    height: 175px;
+    width: 100%;
+    background-color: #F5C6D6;
+    border: 5px solid white;
+}
+
+#two,
+#three,
+#four,
+#five {
+    position: relative;
+    border: 5px solid white;
+    background-color: #EE2E84;
+    height: 175px;
+    width: 25%;
+    display: inline-block;
+}
+
+#six,
+#seven {
+    position: relative;
+    background-color: #85cfd8;
+    display: inline-block;
+    width: 50%;
+    height: 175px;
+    border: 5px solid white;
+}
+
+#eight {
+    position: relative;
+    background-color: #8dc63f;
+    display: inline-block;
+    width: 75%;
+    height: 175px;
+    border: 5px solid white;
+}
+
+#nine {
+    position: relative;
+    background-color: #e76e34;
+    display: inline-block;
+    width: 25%;
+    height: 175px;
+    border: 5px solid white;
+}
+
+@media only screen and (max-width: 768px) {
+    #container > div {
+        width: 100%; 
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More!</title>
+</head>
+<body>
+    <a id="logo" class="links" href="index.html">Programming School</a>
+    <nav>
+        <a class="links" href="index.html">HOME</a>
+        <a class="links" href="learn.html">LEARN MORE</a>
+    </nav>
+    <div class="content">
+        <section>
+            <p>Please fill out the form below and someone will be with you as soon as possible.</p>
+            <form>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="firstName" placeholder="John">
+                <br>
+                <br>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="lastName" placeholder="Smith">
+                <br>
+                <br>
+                <label for="phone-number">Phone Number:</label>
+                <input type="text" id="phone-number" name="phoneNumber" placeholder="(123) 456-7890">
+                <br>
+                <br>
+                <label for="email-address">Email Address:</label>
+                <input type="text" id="email-address" name="emailAddress" placeholder="youremail@mail.com">
+                <br>
+                <br>
+                <label for="contactMethod">Choose contact method!</label>
+                <input list="contactMethod" name="contactMethods" id="contactMethods">
+                <datalist id="contactMethod">
+                    <option value="Phone"></option>
+                    <option value="Email"></option>
+                </datalist>
+                <br>
+                <br>
+                <input id="submit-btn" type="submit" value="Submit">
+            </form>
+        </section>
+    </div>
+    <footer>
+        <ul>
+            <li>Contact</li>
+            <li>Map</li>
+            <li>Address</li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* 
+
+There is no functionality with this website for now. 
+Only HTML and CSS are used for this project.
+
+*/

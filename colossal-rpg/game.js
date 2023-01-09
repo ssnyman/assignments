@@ -54,18 +54,18 @@ function printHeroStats(){
 }
 
 function menu(){
-    baseQuestion = readlineSync.question('\nWhat would you like to do? (W - Walk, I - view Inventory, Q = Quit)');
+    baseQuestion = readlineSync.question('\nWhat would you like to do? (W - Walk, I - See Inventory, Q = Quit)');
     if (baseQuestion === "W" || baseQuestion === "w"){
         walk()
     } else if (baseQuestion === "I" || baseQuestion === "i"){
         displayInventory()
     } else if (baseQuestion === "Q" || baseQuestion === "q"){
         hero.hp = 0
-        console.log("\nNobody like a quitter. Goodbye!\n")
+        console.log("\nNobody like a quitter. Peace!\n")
     } else if (baseQuestion === "p" || baseQuestion === "P" || baseQuestion === "PRINT" || baseQuestion === "Print" || baseQuestion === "print"){
         printHeroStats()
     } else {
-        console.log("(WRONG BUTTON, try again, W or I?")
+        console.log("(WRONG BUTTON. Try again.. W or I?")
         menu()
     }
 }
@@ -105,15 +105,15 @@ function fightTime(){
     
     let enemyDmgDealt
     let enemyDmgTaken    
-    //function allowing for a random amount each time based on enemy dmg parameters
+    
     function attacked(){
         enemyDmgDealt = Math.floor(Math.random() * (monsters[randomEnemy].maxDmg - monsters[randomEnemy].minDmg) + monsters[randomEnemy].minDmg);
     }
-    //function allowing for a random dmg from player each time based on Hero's attack with a plus or minus 5 offset
+    
     function attacks(){
         enemyDmgTaken = Math.floor(Math.random() * ((hero.attack + 5) - (hero.attack -5)) + (hero.attack - 5));
     }
-    console.log("A giant " + monsters[randomEnemy].name + " approaches!")
+    console.log("" + monsters[randomEnemy].name + " approaches!")
     for(let i = 0; monsters[randomEnemy].hp > 0 && hero.hp > 0; i++){
         let fightCommand = readlineSync.question('\nWhat is your action?\nAttack (A)?\nRun (R)?\n')
         if (fightCommand === "A" || fightCommand === "a" || fightCommand === "attack" || fightCommand === "ATTACK" || fightCommand === "Attack") {
@@ -151,9 +151,9 @@ function fightTime(){
         } else if (fightCommand === "R" || fightCommand === "r" || fightCommand === "Run" || fightCommand === "run" || fightCommand === "RUN"){
             let escape = Math.floor(2 * Math.random())
             if (escape < 1){
-                console.log("You attempt to escape...  \nbut the monster blocks your path!")
+                console.log("You attempt to escape... \nbut the monster blocks your path!")
                 attacked();
-                console.log("The " + monsters[randomEnemy].name + " lunges at you, dealing " + enemyDmgDealt + " damage.")
+                console.log("" + monsters[randomEnemy].name + " lunges at you, dealing " + enemyDmgDealt + " damage.")
                 hero.hp = hero.hp - enemyDmgDealt;                
                 console.log("\nYour current HP @ " + hero.hp + "\n")
             } else {

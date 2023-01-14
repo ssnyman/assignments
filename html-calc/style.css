@@ -24,3 +24,45 @@ body {
     padding: 25px;
 }
 
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+div h2 {
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+div hr {
+    margin: 14px 0;
+}
+
+div input[type=text]:read-only {
+    border-radius: 15px;
+    border: 2px solid #000;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    font-size: .5rem;
+    font-weight: bold;
+}
+
+div button {
+    width: 60px;
+    font-size: 20px;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    border-radius: 12px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+}
+
+div button:hover {
+    background-color: rgba(127, 255, 212, 0.666);
+}

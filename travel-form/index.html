@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <title>Travel Form</title>
+</head>
+<body>
+    <h1>Welcome to SB Airlines</h1>
+    <p>Please fill out the following form to help assist you in your travels.</p>
+    <form id="airline-form">
+        <input type="text" name="first-name" placeholder="First Name">
+        <label for="first-name">First Name</label>
+        <br>
+        <input type="text" name="last-name" placeholder="Last Name">
+        <label for="last-name">Last Name</label>
+        <br>
+        <input type="number" name="age" placeholder="Age">
+        <label for="age">Age</label>
+        <br>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female">Female</label>
+        <br>
+        <select name="destination" id="destination">
+            <option value="Paris, France">Paris, France</option>
+            <option value="Munich, Germany">Munich, Germany</option>
+            <option value="Edinburgh, Scotland">Edinburgh, Scotland</option>
+        </select>
+        <label for="where">Destination</label>
+        <br>
+        <input type="checkbox" name="vegetarian" id="veggie" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label>
+        <br>
+        <input type="checkbox" name="lactose-free" id="lactose-free" value=" Lactose Free">
+        <label for="lactose-free">Lactose Free</label>
+        <br>
+        <input type="checkbox" name="gluten-free" id="gluten-free" value=" Gluten Free">
+        <label for="gluten-free">Gluten Free</label>
+        <br>
+        <button id="submit">Submit</button>
+    </form>
+</body>
+</html>

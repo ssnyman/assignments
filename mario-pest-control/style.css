@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .container {
@@ -72,4 +73,19 @@ button {
 
 button:hover {
     background-color: beige;
+}
+
+footer {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(220, 16, 16);
 }

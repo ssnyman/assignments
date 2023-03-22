@@ -1,5 +1,54 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    margin: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container div {
+    position: relative;
+    margin: 10px;
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.box2 {
+    background-color: blue;
+}
+
+.box3 {
+    background-color: green;
+}
+
+.box4 {
+    background-color: yellow;
+}
+
+.box5 {
+    background-color: turquoise;
+}
+
+.box6 {
+    background-color: orange;
+}
